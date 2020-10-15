@@ -1,5 +1,6 @@
 dist: focal
 install: skip
+arch: ppc64le
 script:
 - uname -a
 - sudo apt update
