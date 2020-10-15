@@ -1,6 +1,7 @@
 dist: focal
 install: skip
 arch: ppc64le
+group: edge
 script:
 - uname -a
 - sudo apt update
