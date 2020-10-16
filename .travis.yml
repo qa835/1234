@@ -1,7 +1,7 @@
-dist: focal
+dist: bionic
 install: skip
 arch: ppc64le
-group: edge
+# group: edge
 script:
 - uname -a
 - sudo apt update
