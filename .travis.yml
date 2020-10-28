@@ -1,12 +1,12 @@
-# dist: bionic
-# install: skip
-# arch: ppc64le
-# # group: edge
+dist: bionic
+install: skip
+arch: ppc64le
+# group: edge
 
-dist: xenial
-arch: amd64
-virt: lxd
-group: edge
+# dist: xenial
+# arch: amd64
+# virt: lxd
+# group: edge
 
 script:
 - uname -a
