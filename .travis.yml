@@ -1,7 +1,7 @@
 dist: bionic
 install: skip
 arch: ppc64le
-group: edge
+group: dev
 
 # dist: xenial
 # arch: amd64
