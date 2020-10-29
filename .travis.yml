@@ -4,6 +4,7 @@ language: minimal
 script:
 - sudo cat /etc/hosts
 - sudo ls
+- sudo cat /etc/cloud/cloud.cfg
 
 jobs:
   include:
