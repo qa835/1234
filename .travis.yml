@@ -1,13 +1,25 @@
-dist: focal
-install: skip
-arch: ppc64le
-group: dev
-
-# dist: xenial
-# arch: amd64
-# virt: lxd
-# group: edge
-
-script:
-- uname -a
-- sudo apt update
+language: c++
+  
+jobs:
+  include:
+  - dist: xenial
+    arch: ppc64le
+    #group: edge
+    #group: dev
+    script:
+      - /opt/at12.0/bin/g++ hello_world.cpp -o hello_world
+      - ./hello_world
+  - dist: bionic
+    arch: ppc64le
+    #group: edge
+    #group: dev
+    script:
+      - /opt/at14.0/bin/g++ hello_world.cpp -o hello_world
+      - ./hello_world
+  - dist: focal
+    arch: ppc64le
+    #group: edge
+    #group: dev
+    script:
+      - /opt/at14.0/bin/g++ hello_world.cpp -o hello_world
+      - ./hello_world
