@@ -1,5 +1,6 @@
 # language: c++
 language: minimal
+group: dev
   
 script:
 - sudo cat /etc/hosts
