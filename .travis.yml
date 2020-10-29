@@ -8,6 +8,8 @@ script:
 
 jobs:
   include:
+  - dist: xenial-amd
+    arch: amd64
   - dist: xenial
     arch: ppc64le
     #group: edge
