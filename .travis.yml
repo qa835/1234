@@ -1,6 +1,10 @@
 # language: c++
 language: minimal
   
+script:
+- sudo cat /etc/hosts
+- sudo ls
+
 jobs:
   include:
   - dist: xenial
