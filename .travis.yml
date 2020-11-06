@@ -1,5 +1,6 @@
 # language: c++
-language: minimal
+# language: minimal
+language: perl
 group: dev
   
 script:
