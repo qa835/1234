@@ -2,6 +2,9 @@
 # language: minimal
 language: perl
 # group: dev
+
+perl:
+- 5.26
   
 script:
 - sudo cat /etc/hosts
