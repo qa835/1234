@@ -1,7 +1,7 @@
 # language: c++
 language: minimal
 # language: perl
-# group: dev
+group: dev
 
 # perl:
 # - 5.30
