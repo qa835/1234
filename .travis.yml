@@ -13,7 +13,7 @@ script:
 - sudo cat /etc/hosts
 - sudo ls
 - sudo cat /etc/cloud/cloud.cfg
-- sudo sleep 600
+# - sudo sleep 600
 
 jobs:
   include:
