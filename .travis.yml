@@ -4,7 +4,7 @@ language: perl
 # group: dev
 
 perl:
-- 5.26
+- 5.30
 
 install:
 - skip
