@@ -1,10 +1,10 @@
 # language: c++
-# language: minimal
-language: perl
+language: minimal
+# language: perl
 # group: dev
 
-perl:
-- 5.30
+# perl:
+# - 5.30
 
 install:
 - skip
