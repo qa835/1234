@@ -5,6 +5,9 @@ language: perl
 
 perl:
 - 5.26
+
+install:
+- skip
   
 script:
 - sudo cat /etc/hosts
