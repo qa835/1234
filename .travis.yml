@@ -1,42 +1,44 @@
-# language: c++
-language: minimal
-# language: perl
-group: dev
+dist: xenial
+install: skip
 
-# perl:
-# - 5.30
-
-install:
-- skip
-  
 script:
-- sudo cat /etc/hosts
-- sudo ls
-- sudo cat /etc/cloud/cloud.cfg
-# - sudo sleep 600
+- uname -a
+# - docker pull microsoft/azure-cli
+# - docker pull mcr.microsoft.com/azure-cli
+- sudo cp daemon.json /etc/docker/daemon.json
+- curl -I https://registry-1.travis-ci.com
+- sudo cat /etc/docker/daemon.json
+- sudo systemctl restart docker
+# - docker pull travisci/ci-ubuntu-2004:packer-minimal-1605682785-1fb6ced8
+- docker run node ls
+- docker run ubuntu ls
+- docker run alpine ls
+- docker run debian ls
+- docker run alpine ls
+- docker run mongo ls
+- docker run redis ls
+- docker run postgres ls
+- docker run nginx ls
 
 jobs:
   include:
-  - dist: xenial-amd
-    arch: amd64
-  - dist: xenial
-    arch: ppc64le
-    #group: edge
-    #group: dev
-#     script:
-#       - /opt/at12.0/bin/g++ hello_world.cpp -o hello_world
-#       - ./hello_world
-  - dist: bionic
-    arch: ppc64le
-    #group: edge
-    #group: dev
-#     script:
-#       - /opt/at14.0/bin/g++ hello_world.cpp -o hello_world
-#       - ./hello_world
-  - dist: focal
-    arch: ppc64le
-    #group: edge
-    #group: dev
-#     script:
-#       - /opt/at14.0/bin/g++ hello_world.cpp -o hello_world
-#       - ./hello_world
+  - rvm: 2.7.2
+    name: Ruby 2.7.2
+  - rvm: 2.7.1
+    name: Ruby 2.7.1
+  - rvm: 2.7.0
+    name: Ruby 2.7.0
+  - rvm: 2.6.0
+    name: Ruby 2.6.0
+  - rvm: 2.6.1
+    name: Ruby 2.6.1
+  - rvm: 2.6.2
+    name: Ruby 2.6.2
+  - rvm: 2.6.3
+    name: Ruby 2.6.3
+  - rvm: 2.6.4
+    name: Ruby 2.6.4
+  - rvm: 2.6.5
+    name: Ruby 2.6.5
+  - rvm: 2.6.6
+    name: Ruby 2.6.6  
