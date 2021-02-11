@@ -3,7 +3,6 @@ install: skip
 
 script:
 - uname -a
-
 # - docker pull microsoft/azure-cli
 # - docker pull mcr.microsoft.com/azure-cli
 # - sudo cp daemon.json /etc/docker/daemon.json
